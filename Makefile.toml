@@ -441,6 +441,19 @@ private = true
 command = "cargo"
 args = ["clippy", "--all-targets", "--all-features", "--", "-D", "warnings"]
 
+[tasks.clippyck]
+description = "Run cargo clippy."
+clear = true
+command = "cargo"
+args = [
+    "clippy",
+    "--all-targets",
+    "--all-features",
+    "--target",
+    "aarch64-unknown-linux-gnu",
+    "--message-format=json",
+]
+
 [tasks.fmt]
 description = "Run cargo format."
 clear = true
